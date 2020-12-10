@@ -14,6 +14,14 @@ int findSum2_retProd (std::vector<int> &vect, int sum) {
     return 0;
 }
 
+/**
+ * @brief 
+ * 
+ * @param vect 
+ * @param sum 
+ * @return int Product
+ */
+
 int findSum3_retProd (std::vector<int> &vect, int sum) {
   int i = 0;
   for (std::vector<int>::iterator it = vect.begin (); it < vect.end (); ++it, ++i){
@@ -23,7 +31,7 @@ int findSum3_retProd (std::vector<int> &vect, int sum) {
           for (std::advance (it3, i+1); it3 < vect.end (); ++it3){
 	        if(*it + *it2 + *it3 == sum) return (*it * *it2 * *it3);
             }
-	    }
+	    } 
     }
     return 0;
 }
@@ -53,5 +61,5 @@ int main () {
 
   std::cout << findSum3_retProd(advent, 2020);
 
-  return 0;
+  return 1;
 }
